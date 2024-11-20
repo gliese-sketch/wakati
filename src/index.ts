@@ -14,7 +14,7 @@ function calculateSpeed(
   text: string,
   wpm: number
 ): { wpm: number; seconds: number; minutes: number; wordsCount: number } {
-  const wordsCount = text.split(/\s+/).length;
+  const wordsCount = text.trim().split(/\s+/).length;
   const seconds: number = (wordsCount / wpm) * 60;
   const minutes: number = seconds / 60;
   return {
